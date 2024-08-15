@@ -1,0 +1,74 @@
+:root {
+  --white: #ffffff;
+  --light-pink: #f9e9f4;
+  --grayish-purple: #8e6e8f;
+  --dark-purple: #3e2a4e;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-pink);
+}
+
+.hero-img {
+  height: 200px;
+}
+
+.card {
+  max-width: 550px;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: auto;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.star-icon {
+  margin-right: 1rem;
+}
+
+.dropdown {
+  border-bottom: 1px solid var(--pink); /* figure out why not working */
+  max-width: 550px; /*idk if this is right*/
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* idk */
+  color: var(--dark-purple);
+}
+
+.answer {
+  color: var(--grayish-purple); /*fix this color later*/
+  border-bottom: 1px solid var(--pink);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+// RESPONSIVE LAYOUT
+
+@media (max-width: 375px) {
+}
