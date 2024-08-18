@@ -22,6 +22,10 @@ body {
 
 .hero-img {
   height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 .card {
@@ -31,6 +35,9 @@ body {
   padding: 2rem;
   width: auto;
   margin: auto;
+  position: relative;
+  z-index: 0;
+  top: 6rem;
 }
 
 .header {
@@ -43,32 +50,54 @@ body {
 }
 
 .dropdown {
-  border-bottom: 1px solid var(--pink); /* figure out why not working */
-  max-width: 550px; /*idk if this is right*/
+  border-bottom: 0.5px solid var(--grayish-purple);
+  max-width: 550px;
 }
 
 .question {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; /* idk */
+  align-items: center;
   color: var(--dark-purple);
 }
 
 .answer {
-  color: var(--grayish-purple); /*fix this color later*/
-  border-bottom: 1px solid var(--pink);
+  color: var(--grayish-purple);
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-// RESPONSIVE LAYOUT
-
+/* RESPONSIVE LAYOUT */
 @media (max-width: 375px) {
+  .card {
+    padding: 1rem;
+    margin: 1rem;
+    top: -5rem;
+  }
+
+  .hero-img {
+    height: 150px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .star-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .attribution {
+    font-size: 10px;
+  }
 }
