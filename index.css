@@ -64,6 +64,31 @@ body {
 
 .answer {
   color: var(--grayish-purple);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.dropdown.active .answer {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.dropdown.active .plus {
+  display: none;
+}
+
+.dropdown.active .minus {
+  display: inline;
+}
+
+.plus {
+  display: inline;
+}
+
+.minus {
+  display: none;
 }
 
 .attribution {
@@ -75,11 +100,10 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-/* RESPONSIVE LAYOUT */
 @media (max-width: 375px) {
   .card {
     padding: 1rem;
-    margin: 1rem;
+    margin: 2rem;
     top: -5rem;
   }
 
